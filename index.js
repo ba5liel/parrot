@@ -57,5 +57,5 @@ const server = http.createServer(function (request, response) {
   }
 })
 
-server.listen(port, host)
+server.listen(port)
 console.log(`Listening at http://${host}:${port}`)
