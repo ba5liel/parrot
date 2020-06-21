@@ -17,5 +17,8 @@
     "tool"
   ],
   "author": "baslielselamu2018@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sqlite3": "^4.2.0"
+  }
 }
