@@ -2,7 +2,7 @@ const http = require('http')
 const { count } = require('console')
 var sqlite3 = require('sqlite3').verbose()
 const port = process.env.PORT || 4000
-const host = '127.0.0.1'
+const host = 'localhost'
 const db = new sqlite3.Database(
   './users.db',
   sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE
