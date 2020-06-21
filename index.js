@@ -44,7 +44,7 @@ const server = http.createServer(function (request, response) {
       <html>
           <body>
           ${enteries}
-              <form method="post" action="http://localhost:${port}">Name: 
+              <form method="post" action="https://wifiparrot.herokuapp.com">Name: 
                   <input type="text" name="name" />
                   <input type="submit" value="Submit" />
               </form>
