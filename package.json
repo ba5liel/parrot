@@ -1,0 +1,21 @@
+{
+  "name": "parrot",
+  "version": "1.0.0",
+  "description": "wifi hacking tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016https://github.com/ba5liel/parrot.git"
+  },
+  "keywords": [
+    "parrot",
+    "hacking",
+    "wifi",
+    "tool"
+  ],
+  "author": "baslielselamu2018@gmail.com",
+  "license": "MIT"
+}
