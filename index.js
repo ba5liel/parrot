@@ -7,6 +7,7 @@ const db = new sqlite3.Database(
   './users.db',
   sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE
 )
+//
 db.run(
   "create table IF NOT EXISTS 'enteries'(id varchar(255) primary key, session text",
   err => console.log(err || 'init db no error')
