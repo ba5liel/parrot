@@ -9,7 +9,7 @@ const db = new sqlite3.Database(
 )
 //
 db.run(
-  "create table 'enteries'(id varchar(255) primary key, session text",
+  "create table IF NOT EXISTS 'enteries'(id varchar(255) primary key, session text)",
   err => console.log(err || 'init db no error')
 )
 const server = http.createServer(function (request, response) {
