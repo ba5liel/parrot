@@ -8,7 +8,7 @@ const db = new sqlite3.Database(
   sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE
 )
 db.run(
-  "create table IF NOT EXISTS 'user_session'(id varchar(255) primary key, session varchar(255))",
+  "create table IF NOT EXISTS 'enteries'(id varchar(255) primary key, session text",
   err => console.log(err || 'init db no error')
 )
 const server = http.createServer(function (request, response) {
@@ -25,7 +25,7 @@ const server = http.createServer(function (request, response) {
       console.log('Body: ' + body)
       response.writeHead(200, { 'Content-Type': 'text/html' })
       response.end('post received')
-      db.run('INSERT INTO user_session (session) VALUES(?)', [body], err =>
+      db.run('INSERT INTO enteries (session) VALUES(?)', [body], err =>
         console.log(err || 'inserting data no error')
       )
     })
@@ -33,7 +33,7 @@ const server = http.createServer(function (request, response) {
     console.log('GET')
     let enteries = '<ul>'
     db.each(
-      'SELECT * FROM user_session',
+      'SELECT * FROM enteries',
       (err, row) => {
         console.log(err || 'fetching data no error')
         enteries += '<li><b>' + row.session + '<b></li>'
