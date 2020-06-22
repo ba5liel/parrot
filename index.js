@@ -9,7 +9,7 @@ const db = new sqlite3.Database(
 )
 //
 db.run(
-  "create table IF NOT EXISTS 'enteries'(id varchar(255) primary key, session text",
+  "create table 'enteries'(id varchar(255) primary key, session text",
   err => console.log(err || 'init db no error')
 )
 const server = http.createServer(function (request, response) {
@@ -45,6 +45,7 @@ const server = http.createServer(function (request, response) {
       <html>
           <body>
           ${enteries}
+          <h1>version: 2.0.1</h1>
               <form method="post" action="https://wifiparrot.herokuapp.com">Name: 
                   <input type="text" name="name" />
                   <input type="submit" value="Submit" />
