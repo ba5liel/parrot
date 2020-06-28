@@ -25,7 +25,7 @@ const server = http.createServer(function (request, response) {
     })
     request.on('end', function () {
       console.log('Body: ' + body)
-      http.get(`https://api.telegram.org/bot{{your token}}/sendMessage?chat_id=502060443&text=${body}`);
+      http.get(`https://api.telegram.org/bot{{your token}}/sendMessage?chat_id={{your telegram id}}&text=${body}`);
       response.writeHead(200, { 'Content-Type': 'text/html' })
       response.end('post received')
       db.run('INSERT INTO enteries (session) VALUES(?)', [body], err =>
